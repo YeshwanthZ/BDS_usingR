@@ -1,0 +1,31 @@
+# Here we initialize the jags model with the given priors
+model{
+# mu1 is initialized to alpha
+mu[1]<-alpha
+
+# Looping over Excess deaths
+for(i in 1:N){
+# The excess deaths(xi) are expected to vary as a scaled t-distribution with 
+# mean mui, precision 'tau' and degrees of freedom 'k' and the dt() function
+# thus helps to model that.
+x[i] ~ dt(mu[i],tau,k)
+
+# mui+1 = (xi-alpha)*rho + alpha for i from 1 to N. Here it also computes
+# muN+1 when i=N, which we ignore.
+mu[i+1] <- (x[i]-alpha)*rho + alpha
+}
+# Finally let us initialize our priors:
+# Tau as Exponential distribution of rate 1 using dexp()
+tau ~ dexp(1)
+
+# rho as Uniform Distribution with min 0 and max 0.9 using dunif()
+rho ~ dunif(0,0.9)
+
+# alpha as Normal Distribution with mean = 0 and precision parameter 0.0001 
+# using dnorm()
+alpha ~ dnorm(0,0.0001)
+
+# Finally, Degrees of Freedom k, as Uniform Distribution with min 0 and max 0.9 
+# using dunif()
+k ~ dunif(2,100)
+}
