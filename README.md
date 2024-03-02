@@ -1,9 +1,4 @@
-# RProgrammingportfolio
-I have put together a collection of very interesting projects using R Programming that I had 
-submitted during my Masters degree. These projects cover a major portion of Statistics concepts 
-such as Data Analysis, Data Visualisation, Data Analytics, Statistical modelling, Model testing 
-Model Evaluation, Hypothesis testing, Correlation, Measures of Central tendency, Measures of 
-Dispersion, Sampling methods, Maximum Likelihood Estimate, Newton's Method, Splines, Confidence 
-intervals etc. They also cover various R Programming fundamentals such as Conditional Statements, Loop optimisation, Dataframes, Data tables, plots, Matrices, and packages such as rjags, ggplot2, glmnet etc.
+# BiomedicalDataScience 
+Two projects that I coded sing R Programming as a part of the course "Biomedical Data Science".I had submitted during my Masters degree. These projects cover a major portion of Statistial concepts such as Data Cleaning, Data Analysis, Data Visualisation, Data Analytics, Statistical modelling, Model Evaluation, Hypothesis testing, Correlation, Measures of Central tendency, Measures of Dispersion, Sampling methods, Confidence intervals etc. They also cover various R Programming fundamentals such as Conditional Statements, Loop optimisation, Dataframes, Data tables, plots, Matrices, and packages such as base, stats, pROC, ggplot2, glmnet etc.
 
 
